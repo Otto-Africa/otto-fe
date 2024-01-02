@@ -28,7 +28,7 @@ const QRCodeChanger = ({ size }) => {
 			value={qrData}
 			size={size}
 			bgColor={"#EEEEEE00"}
-			fgColor={"#8dd9ff"}
+			fgColor={"#1b3359"}
 		/>
 	);
 };
