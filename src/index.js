@@ -6,6 +6,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/landing-page";
 import { paths } from "./utils/routes";
 import Page404 from "./pages/404";
+import Business from "./pages/why-otto/business";
+import Personal from "./pages/why-otto/personal";
+import QRPayments from "./pages/about/qr-payments";
+import GiftCards from "./pages/about/gift-cards";
+import Blog from "./pages/blog";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +20,26 @@ root.render(
 				<Route
 					path={paths.LANDING_PAGE}
 					element={<LandingPage />}
+				/>
+				<Route
+					path={paths.WHY_OTTO_BUSINESS}
+					element={<Business />}
+				/>
+				<Route
+					path={paths.WHY_OTTO_PERSONAL}
+					element={<Personal />}
+				/>
+				<Route
+					path={paths.QR_PAYMENTS}
+					element={<QRPayments />}
+				/>
+				<Route
+					path={paths.GIFT_CARDS}
+					element={<GiftCards />}
+				/>
+				<Route
+					path={paths.BLOG}
+					element={<Blog />}
 				/>
 
 				<Route
