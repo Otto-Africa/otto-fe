@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
 	return (
-		<div className="w-full flex px-[5%] md:px-[12.5%] justify-center">
-			<div className="w-full max-w-[1920px] mx-auto justify-center items-center  flex flex-col py-12">
+		<div className="w-full flex px-[5%] lg:px-[17.5%] justify-center">
+			<div className="w-full lg:min-w-[1330px] lg:max-w-[1920px] mx-auto justify-center items-center  flex flex-col py-12">
 				<div className="flex w-full flex-col items-stretch mt-16 mb-12 max-md:max-w-full max-md:my-10">
 					<div className="max-md:max-w-full">
 						<div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
