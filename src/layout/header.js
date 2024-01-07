@@ -1,13 +1,17 @@
+import { Drawer } from "antd";
 import React, { useEffect, useRef, useState } from "react";
-import { FaBars, FaCaretDown, FaHamburger } from "react-icons/fa";
+import { FaBars, FaCaretDown, FaChevronDown, FaPhone } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
 	const navigate = useNavigate();
 	const aboutRef = useRef(null);
 	const whyRef = useRef(null);
-	const [aboutIsOpen, setAboutIsOpen] = useState();
-	const [whyIsOpen, setWhyIsOpen] = useState();
+	const [aboutIsOpen, setAboutIsOpen] = useState(false);
+	const [whyIsOpen, setWhyIsOpen] = useState(false);
+	const [mobileWhyOpen, setMobileWhyOpen] = useState(false);
+	const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+	const [openNavBar, setOpenNavBar] = useState(false);
 
 	const setOpenAbout = () => {
 		setAboutIsOpen(!aboutIsOpen);
@@ -75,7 +79,7 @@ const Header = () => {
 
 	return (
 		<div className="fixed flex justify-center w-full bg-white z-50 border-b border-[#C9C9C9]/30">
-			<div className="bg-white w-full max-w-[1920px] mx-auto flex items-center h-[72px] md:h-[88px] space-x-8 px-[5%]">
+			<div className="bg-white w-full max-w-[1920px] mx-auto flex items-center h-[72px] lg:h-[88px] space-x-8 px-[5%]">
 				{/* < className="flex items-center space-x-8"> */}
 				{/* Logo */}
 				<img
@@ -90,12 +94,121 @@ const Header = () => {
 
 				{/* Body */}
 				{/* Responsive Menu */}
-				<div className="w-full place-content-end flex">
+				<div
+					className="lg:hidden w-full place-content-end flex"
+					onClick={() => {
+						setOpenNavBar(true);
+					}}>
 					<FaBars />
 				</div>
+				{openNavBar && (
+					<Drawer
+						open={openNavBar}
+						placement="right"
+						onClose={() => setOpenNavBar(false)}>
+						{
+							<>
+								<div className="justify-between flex flex-col h-full p-4">
+									<ul className="flex flex-col gap-8">
+										<li
+											onClick={() => {
+												setMobileWhyOpen(
+													!mobileWhyOpen
+												);
+											}}>
+											<p className="font-semibold text-base">
+												Why Otto
+											</p>
+											{mobileWhyOpen && (
+												<div className="pl-2 space-y-6 font-semibold my-6">
+													{whyList.map((items) => {
+														return (
+															<div
+																className="cursor-pointer"
+																onClick={() => {
+																	navigate(
+																		items.route
+																	);
+																}}>
+																<p className="font-medium">
+																	{
+																		items.title
+																	}
+																</p>
+															</div>
+														);
+													})}
+												</div>
+											)}
+										</li>
+										<li
+											onClick={() => {
+												setMobileAboutOpen(
+													!mobileAboutOpen
+												);
+											}}>
+											<p className="font-semibold text-base">
+												About
+											</p>
+											{mobileAboutOpen && (
+												<div className="pl-2 space-y-6 font-semibold my-6">
+													{aboutList.map((items) => {
+														return (
+															<div
+																className="cursor-pointer"
+																onClick={() => {
+																	navigate(
+																		items.route
+																	);
+																}}>
+																<p className="font-medium">
+																	{
+																		items.title
+																	}
+																</p>
+															</div>
+														);
+													})}
+												</div>
+											)}
+										</li>
+
+										<li
+											className="font-semibold text-base"
+											onClick={() => {
+												navigate("/blog");
+											}}>
+											Blog
+										</li>
+									</ul>
+									<div className="flex flex-col space-y-6">
+										<div className="flex gap-3 items-center">
+											<div className="bg-[#1b3359] text-white h-[28px] w-[28px] flex items-center justify-center rounded-full">
+												<FaPhone size={12}/>{" "}
+											</div>
+											<p className="text-slate-500 font-semibold">
+												Support
+											</p>
+										</div>
+
+										{/* <p className="text-slate-500">Login</p> */}
+										<div className="text-white w-fit text-[14px] border bg-[#1b3359] rounded-lg px-6 py-3">
+											Join the Waitlist
+										</div>
+										<img
+											src="https://res.cloudinary.com/dqicwto8t/image/upload/v1703958592/Ghana-Flag_xtapmg.png"
+											alt=""
+											className="h-[24px] rounded-md"
+										/>
+									</div>
+								</div>
+							</>
+						}
+					</Drawer>
+				)}
 
 				{/* Desktop Nav Bar */}
-				<div className="hidden md:flex w-full justify-between items-center">
+				<div className="hidden lg:flex w-full justify-between items-center">
 					{/* Why Otto */}
 					<ul className="flex space-x-8">
 						<li
