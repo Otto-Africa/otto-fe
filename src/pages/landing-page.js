@@ -26,13 +26,13 @@ const LandingPage = () => {
 		<Layout
 			body={
 				<>
-					<section className="w-full bg-[#8dd9ff]/20 flex items-center justify-center">
-						<div className="relative pb-16 lg:max-w-[1920px] w-full px-[5%] lg:px-[17.5%] flex justify-center">
-							<div className="lg:max-w-8xl pt-40 lg:pt-64 relative lg:mx-auto">
+					<section className="w-full bg-[#8dd9ff]/20 flex items-center justify-center pb-8">
+						<div className="relative pb-16 lg:min-w-[1330px] lg:max-w-[1920px] w-full px-[5%] lg:px-[17.5%] flex justify-center">
+							<div className="w-full lg:max-w-8xl pt-40 lg:pt-64 relative lg:mx-auto ">
 								<div className=" w-full lg:flex lg:space-x-[80px]">
 									<div className="w-full lg:w-1/2">
 										<div className="w-full flex flex-col">
-											<p className="leading-[1.2] text-[2.1rem] lg:leading-[48px] lg:text-[40px] w-[90%] mb-6 font-black">
+											<p className="leading-[1.2] text-[2.1rem] md:text-[2.8rem] lg:text-[3.2rem] w-[90%] mb-6 font-black">
 												Pay & get paid with cash, gift
 												cards, and more.
 											</p>
@@ -68,11 +68,11 @@ const LandingPage = () => {
 										</div>
 									</div>
 
-									<div className="flex w-full lg:w-1/2 mt-24 lg:-mt-8">
+									<div className="flex w-full md:w-3/5 lg:w-1/2 mt-24 lg:-mt-8">
 										<div className="w-full  h-full rounded-2xl lg:p-8">
 											{/* <p className="mb-6 font-semibold">Gift Cards</p> */}
 											<div className="relative h-[16rem] lg:h-[24rem]">
-												<div className="absolute -right-4 lg:-left-40 -top-4 lg:top-48 flex mt-0 lg:w-[262px] max-w-full flex-col self-start">
+												<div className="absolute -right-3 lg:-left-40 -top-4 lg:top-48 flex mt-0 lg:w-[262px] max-w-full flex-col self-start">
 													<div className="bg-white z-10 flex justify-between gap-5 p-3 lg:p-5 rounded-xl">
 														<div className="flex flex-col">
 															<div className="text-slate-500 text-sm whitespace-nowrap">
@@ -161,64 +161,66 @@ const LandingPage = () => {
 						</div>
 					</section>
 
-					<section className="w-full flex items-center justify-center">
-						<div className="flex w-full flex-col mb-12 lg:py-12 mt-8 lg:mt-12 lg:max-w-[1920px] px-[5%] lg:px-[17.5%] justify-center">
-							<div className="flex lg:items-center flex-col mt-8 lg:mt-10 max-lg:flex-col lg:w-full max-lg:ml-0">
-								<p className="text-3xl lg:text-4xl font-bold w-[75%] lg:w-full">
-									Pay or gift with a simple scan
-								</p>
-								<p className="lg:w-[40%] mt-6 lg:mt-4 lg:text-center text-slate-500 lg:text-lg leading-relaxed max-lg:max-w-full">
-									Transform the way you pay and gift,
-									supercharge your payments and earn rewards
-									on your transactions.
-								</p>
-							</div>
+					<section className="w-full lg:flex items-center justify-center">
+						<div className="lg:flex w-full gap-16 mb-8 lg:py-12 mt-8 lg:mt-12 lg:min-w-[1330px] lg:max-w-[1920px] px-[5%] lg:px-[17.5%]">
+							<div className="lg:w-1/2 ">
+								<div className="flex flex-col  max-lg:flex-col lg:w-full max-lg:ml-0">
+									<p className="text-3xl lg:text-4xl font-bold w-[75%] lg:w-full">
+										Pay or gift with a simple scan
+									</p>
+									<p className="mt-6 lg:mt-4 text-slate-500 lg:text-lg leading-relaxed max-lg:max-w-full">
+										Transform the way you pay and gift,
+										supercharge your payments and earn
+										rewards on your transactions.
+									</p>
+								</div>
 
-							<div className="relative bg-gray-100 mt-12 p-8 h-[38rem] md:-h-[32rem] rounded-2xl lg:w-1/5 place-self-center">
-								<div className="flex items-center justify-center p-4 py-16 rounded-2xl">
-									<QRCodeChanger size={280} />
-								</div>
-								<div className=" border absolute top-4 -left-8 bg-white rounded-full px-6 py-2">
-									Scan, Pay, Grow 🥰
-								</div>
-								<div className="relative space-y-6 justify-center flex">
-									<div className="absolute justify-between items-center flex w-full border -top-8 bg-white p-2 rounded-full">
-										<div className="flex items-center justify-between w-full">
-											<div className="flex items-center">
-												<div className="h-10 w-16 rounded-full overflow-hidden">
-													<img
-														src="https://res.cloudinary.com/dqicwto8t/image/upload/v1703957412/portrait-lesbian-couple-posing-together_2_kw0ar7.jpg"
-														alt=""
-														className="h-full w-full object-cover"
-													/>
+								<div className="relative bg-gray-50 mt-12 p-8 rounded-2xl ">
+									<div className="flex items-center justify-center p-4 py-16 rounded-2xl">
+										<QRCodeChanger size={300} />
+									</div>
+									<div className=" border absolute top-4 -left-8 bg-white rounded-full px-6 py-2">
+										Scan, Pay, Grow 🥰
+									</div>
+									<div className="relative space-y-6 justify-center">
+										<div className="justify-between items-center flex w-full border -top-8 bg-white p-2 rounded-full">
+											<div className="flex items-center justify-between w-full">
+												<div className="flex items-center">
+													<div className="h-10 w-16 rounded-full overflow-hidden">
+														<img
+															src="https://res.cloudinary.com/dqicwto8t/image/upload/v1703957412/portrait-lesbian-couple-posing-together_2_kw0ar7.jpg"
+															alt=""
+															className="h-full w-full object-cover"
+														/>
+													</div>
+													<p className="font-semibold ml-3">
+														Kwasi
+													</p>
 												</div>
-												<p className="font-semibold ml-3">
-													Kwasi
-												</p>
+												<button
+													className="text-white text-sm font-medium whitespace-nowrap bg-[#1b5459] self-center aspect-[2.2857142857142856] justify-center my-auto px-4 py-2.5 rounded-[40px]"
+													aria-label="Send">
+													Send
+												</button>
 											</div>
-											<button
-												className="text-white text-sm font-medium whitespace-nowrap bg-[#1b5459] self-center aspect-[2.2857142857142856] justify-center my-auto px-4 py-2.5 rounded-[40px]"
-												aria-label="Send">
-												Send
-											</button>
+										</div>
+										<div className="pt-1 pb-4 space-y-3">
+											<p className="text-xl font-bold">
+												Open on Mobile
+											</p>
+											<p className="text-base lg:w-[80%]">
+												Scan with your phone’s camera or
+												the Otto app to pay
+											</p>
 										</div>
 									</div>
-									<div className="pt-6 pb-4 space-y-3">
-										<p className="text-xl font-bold">
-											Open on Mobile
-										</p>
-										<p className="text-base">
-											Scan with your phone’s camera or the
-											Otto app to pay
-										</p>
-									</div>
 								</div>
 							</div>
 
-							<div className="rounded-3xl lg:flex flex flex-col gap-12 w-[90%] lg:w-full mt-20 lg:mt-14 items-center">
+							<div className="lg:w-1/2 rounded-3xl space-y-4 mt-8 lg:mt-0">
 								{valuelist.map((item) => {
 									return (
-										<div className="lg:w-1/3 lg:p-8 rounded-xl lg:bg-gray-50 flex max-lg:w-full lg:ml-0 lg:mb-12 gap-4">
+										<div className="flex gap-4 lg:bg-gray-50 lg:pb-6 pt-8 lg:px-6 rounded-2xl w-[90%]">
 											<div className="lg:hidden">
 												<div className="mt-1 bg-[#1b3359] h-8 w-8 flex items-center justify-center rounded-full">
 													<FaCheck color="white" />
@@ -239,14 +241,14 @@ const LandingPage = () => {
 						</div>
 					</section>
 					<section className="w-full flex items-center justify-center">
-						<div className="flex w-full flex-col mb-12 lg:py-12 lg:mt-12 lg:max-w-[1920px] px-[5%] lg:px-[17.5%] justify-center">
-							<div className="lg:flex justify-between items-center z-20 mt-12 bg-[#1b3359] px-6 py-8 lg:px-16 lg:py-12 rounded-xl max-lg:px-5">
+						<div className="flex w-full flex-col my-12 lg:py-12 lg:min-w-[1330px] lg:max-w-[1920px] px-[5%] lg:px-[17.5%] justify-center">
+							<div className="lg:flex justify-between items-center z-20 bg-[#1b3359] px-6 py-8 lg:px-16 lg:py-12 rounded-xl max-lg:px-5">
 								<h1 className="text-white text-2xl lg:text-4xl font-bold lg:leading-[55px] tracking-tighter">
 									Sign up for free.
 									<br />
 									Supercharge your payments
 								</h1>
-								<button className="mt-12 lg:mt-0 border h-[48px] lg:h-[64px] rounded-xl px-16 font-semibold bg-[#ffffff] text-black">
+								<button className="mt-8 lg:mt-0 border h-[48px] lg:h-[64px] rounded-xl px-16 font-semibold bg-[#ffffff] text-black">
 									Join the Waitlist
 								</button>
 							</div>
