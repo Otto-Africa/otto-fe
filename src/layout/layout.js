@@ -9,8 +9,8 @@ const Layout = ({ body }) => {
 			<Header />
 
 			{/* Body */}
-			<div className="w-full px-[5%] md:px-[12.5%] flex justify-center">
-				<div className="z-10 md:max-w-[1920px] w-full">{body}</div>
+			<div className="">
+				<div className="z-10 w-full">{body}</div>
 			</div>
 
 			{/* Footer */}
