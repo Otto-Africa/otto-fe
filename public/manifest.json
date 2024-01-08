@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Otto QR Payments",
+  "name": "Pay and get paid with cash, gift cards and more",
   "icons": [
     {
       "src": "favicon.ico",
