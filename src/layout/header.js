@@ -184,7 +184,7 @@ const Header = () => {
 									<div className="flex flex-col space-y-6">
 										<div className="flex gap-3 items-center">
 											<div className="bg-[#1b3359] text-white h-[28px] w-[28px] flex items-center justify-center rounded-full">
-												<FaPhone size={12}/>{" "}
+												<FaPhone size={12} />{" "}
 											</div>
 											<p className="text-slate-500 font-semibold">
 												Support
@@ -195,11 +195,13 @@ const Header = () => {
 										<div className="text-white w-fit text-[14px] border bg-[#1b3359] rounded-lg px-6 py-3">
 											Join the Waitlist
 										</div>
-										<img
-											src="https://res.cloudinary.com/dqicwto8t/image/upload/v1703958592/Ghana-Flag_xtapmg.png"
-											alt=""
-											className="h-[24px] rounded-md"
-										/>
+										<div>
+											<img
+												src="https://res.cloudinary.com/dqicwto8t/image/upload/v1703958592/Ghana-Flag_xtapmg.png"
+												alt=""
+												className="h-[24px] rounded-md object-contain"
+											/>
+										</div>
 									</div>
 								</div>
 							</>
