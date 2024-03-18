@@ -11,6 +11,7 @@ import Personal from "./pages/why-otto/personal";
 import QRPayments from "./pages/about/qr-payments";
 import GiftCards from "./pages/about/gift-cards";
 import Blog from "./pages/blog";
+import DataDeletion from "./pages/data_deletion";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -40,6 +41,10 @@ root.render(
 				<Route
 					path={paths.BLOG}
 					element={<Blog />}
+				/>
+				<Route
+					path={paths.DATA_DELETION}
+					element={<DataDeletion />}
 				/>
 
 				<Route

@@ -4,5 +4,6 @@ export const paths = {
 	WHY_OTTO_PERSONAL: "/why-choose-otto-personal",
 	QR_PAYMENTS: "/qr-payments",
 	GIFT_CARDS: "/gift-cards",
-    BLOG: "/blog",
+	BLOG: "/blog",
+	DATA_DELETION: "/otto-data-deletion",
 };

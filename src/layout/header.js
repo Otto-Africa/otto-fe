@@ -307,6 +307,15 @@ const Header = () => {
 												<ul className="cursor-pointer">
 													Otto Team
 												</ul>
+												<ul
+													className="cursor-pointer"
+													onClick={() =>
+														navigate(
+															"/otto-data-deletion"
+														)
+													}>
+													Account Deletion
+												</ul>
 											</li>
 											<div className="flex space-x-2 mt-12">
 												<img
